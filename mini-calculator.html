@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator || By JavaScript</title>
+
+    <!-- Custom css link -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    
+    <section class="calc-section">
+        
+        <h1>MINI CALCULATOR</h1>
+
+        <div class="calc-main">
+
+            <div class="calc">
+                
+                <input type="number" min="0" placeholder="Add First No." id="first-input" required>
+
+                <input type="number" min="0" placeholder="Add Second No." id="second-input" required>
+
+                <button class="btn" id="btn1" onclick="addition()">Addition</button>
+                <button class="btn" id="btn2" onclick="subtraction()">Subtraction</button>
+                <button class="btn" id="btn3" onclick="multiplication()">Multiplication</button>
+                <button class="btn" id="btn4" onclick="division()">Division</button>
+
+                <h5 class="ans-field" id="result">RESULT</h5>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+
+        // Getting hold on both inputs
+        var firstInput = document.getElementById("first-input").value;
+        
+        var secondInput = document.getElementById("second-input").value;
+
+        var firstInput = parseInt(firstInput)
+
+        var secondInput = parseInt(secondInput)
+
+
+        // Functions should be applied on click 
+        function addition() {
+            
+            var add = firstInput + secondInput;
+
+            document.getElementById("result").innerHTML = add;
+
+        }
+
+        function subtraction() {
+
+            var subtract = firstInput - secondInput;
+
+            document.getElementById("result").innerHTML = subtract;
+
+        }
+
+        function multiplication() {
+            
+            var multiply = firstInput * secondInput;
+
+            document.getElementById("result").innerHTML = multiply;
+
+        }
+        
+        function division() {
+
+            var divide = firstInput / secondInput;
+
+            // var divide = Math.round(divide)
+
+            document.getElementById("result").innerHTML = divide;
+
+        }
+
+
+    </script>
+
+</body>
+</html>
